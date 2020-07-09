@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Company Agent details</h1>
+    {% if obj %}
+    <table border="2">
+        <thead>
+            <th>Company name</th>
+            <th>Agent name</th>
+            <th>calls attended</th>
+            <th>Time duration</th>
+        </thead>
+        {% for k in obj %}
+        <tr>
+            <td>{{k.company}}</td>
+            <td>{{k.emp_name}}</td>
+            <td>{{k.call_atd}}</td>
+            <td>{{k.time_dur}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <p>No Records found</p>
+    {%endif%}
+    
+</body>
+</html>
